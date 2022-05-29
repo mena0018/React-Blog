@@ -19,13 +19,3 @@ body {
   height: 100%;
   background: #ececec;
 }
-
-/* Loader */
-.fa-spinner {
-  font-size: 80px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: $dark-green;
-}

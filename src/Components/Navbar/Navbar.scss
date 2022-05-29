@@ -1,0 +1,27 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to right, midnightblue, rgb(109, 11, 109));
+  z-index: 10;
+
+  .liste-nav {
+    height: 100%;
+    position: relative;
+    @include align-flex(center);
+    list-style-type: none;
+    transition: all 0.5s ease-in-out;
+
+    .item-nav {
+      color: $light-grey;
+      margin: 0 20px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+}
