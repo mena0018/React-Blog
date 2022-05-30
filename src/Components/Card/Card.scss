@@ -5,18 +5,18 @@
 .card {
     width: 300px;
     padding: 10px;
-    box-shadow: 0 0px 10px $black;
+    box-shadow: 0 0 10px $grey;
     margin: 10px;
     cursor: pointer;
     min-height: 200px;
     border-radius: 5px;
-    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
 
     h2 {
-        font-size: 25px;
+        font-size: 20px;
         margin-bottom: 10px;
     }
 

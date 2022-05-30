@@ -2,7 +2,7 @@ const INITIAL_STATE = {
     articles: []
 }
 
-function articleReducer (state = INITIAL_STATE, action) {
+export function articleReducer (state = INITIAL_STATE, action) {
 
     switch(action.type) {
         case "LOADARTICLES" : {
@@ -18,7 +18,6 @@ function articleReducer (state = INITIAL_STATE, action) {
     return state;
 }
 
-export default articleReducer;
 
 
 
