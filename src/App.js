@@ -1,14 +1,25 @@
 import './index.scss';
-import Navbar from './components/Navbar/Navbar';
-import Home from './components/Home/Home';
+import Navbar from './Components/Navbar/Navbar';
+import Home from './Components/Home/Home';
+import { Routes, Route } from 'react-router-dom';
+import AddArticle from './Pages/AddArticle/AddArticle';
+import Contact from './Pages/Contact/Contact';
+import Article from './Pages/Article/Article';
+
 
 function App() {
   return (
-
-    <div className="App">
+    <>
       <Navbar />
-      <Home />
-    </div>
+
+      <Routes>
+        <Route path="/" element={ <Home /> }/>
+        <Route path="/ecrire" element={ <AddArticle /> }/>
+        <Route path="/contact" element={ <Contact /> }/>
+        <Route path="/article" element={ <Article /> }/>
+      </Routes>
+
+    </>
   );
 }
 
