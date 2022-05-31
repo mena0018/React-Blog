@@ -12,7 +12,6 @@ export function articleReducer (state = INITIAL_STATE, action) {
             }
         }
         default : {
-            console.log("ERREUR")
         }
     }
     return state;
