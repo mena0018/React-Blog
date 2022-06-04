@@ -23,6 +23,7 @@ form {
     border-radius: 5px;
     border: 1px solid $black;
     outline: none;
+    font-family: $font-fam;
 
     &::placeholder {
       font-size: 16px;
@@ -44,5 +45,7 @@ form {
     margin: 0 auto;
     padding: 10px 0;
     cursor: pointer;
+    font-family: $font-fam;
+    font-size: 16px;
   }
 }

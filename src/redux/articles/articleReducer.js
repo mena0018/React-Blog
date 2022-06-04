@@ -7,16 +7,20 @@ export function articleReducer (state = INITIAL_STATE, action) {
     switch(action.type) {
         case "LOADARTICLES" : {
             return {
-                ...state,
                 articles: action.payload
             }
         }
-        default : {
+
+        case "ADDARTICLE" : {
+            const newArr = [...state.articles]
+            newArr.unshift(action.payload)
+            return {
+                articles: newArr
+            }
         }
     }
     return state;
 }
-
 
 
 
@@ -30,4 +34,3 @@ export const getArticles = () => dispatch => {
             })
         })
 }
-
