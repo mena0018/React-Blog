@@ -1,0 +1,23 @@
+ @import "../../scss/mixins";
+ @import "../../scss/variables";
+
+
+ .container-contact {
+     max-width: 700px;
+     margin: 100px auto 0;
+     font-size: 25px;
+
+     h1 {
+        @include title;
+     }
+
+     li {
+         margin: 10px 50px 0;
+     }
+
+     p {
+         &:nth-child(4) {
+             margin-top: 40px;
+         }
+     }
+ }
