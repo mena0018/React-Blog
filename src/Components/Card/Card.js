@@ -1,9 +1,10 @@
 import "./Card.scss"
 import { useTrail, animated } from 'react-spring';
 import {v4 as uuidv4} from "uuid"
+import { Link } from "react-router-dom";
 
 
-export default function Card({ title }) {
+export default function Card({ title, body }) {
 
   const trail = useTrail( 1, {
     from: {
@@ -16,6 +17,8 @@ export default function Card({ title }) {
     }
   })
   
+  const slug = title.toLowerCase().replace(/\s+/g, '-').trim();
+
   return (
     <>
       {trail.map(cardStyle => {
@@ -23,7 +26,12 @@ export default function Card({ title }) {
 
           <div className="card">
             <h2>{title}</h2>
-            <a href="/"> Lien vers l'article</a>
+            <Link to={`/articles/${slug}`} 
+                  state={{ title: title, body: body }} 
+              >  
+
+              Lien vers l'article
+            </Link>
           </div>
 
         </animated.div>

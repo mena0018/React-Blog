@@ -27,7 +27,7 @@ export default function Home() {
 
       <div className="container-cards">
         {articles.map(item => {
-          return <Card title={item.title} key={uuidv4()} />
+          return <Card title={item.title} body={item.body} key={uuidv4()} />
         })}
       </div>
     </>
